@@ -51,8 +51,41 @@ formulario.addEventListener("submit", function(e) {
 
     
     }
+
+    let maior = 0;
+    let vencedorLocal = 0;
+
+    for (let i = 0; i < pontuacao.length; i++) {
+        if (pontuacao[i] > maior) {
+        maior = pontuacao[i];
+        vencedorIndex = i; // guarda a posição do maior
+        }
+    }
+
     console.log(pontuacao);//essa é a soma de cada pontuação
     console.log(respostas); // mostra todas as escolhas do usuário em array
+    console.log(vencedorLocal);// mostra o indicie da maior pontuação
+    console.log(maior);//mostra a maior pontuação
+
+    switch (vencedorIndex) {
+        case 0:
+            console.log("Você é o Pikachu!");
+            break;
+        case 1:
+            console.log("Você é o Charizard!");
+            break;
+        case 2:
+            console.log("Você é o Mewtwo!");
+            break;
+        case 3:
+            console.log("Você é o Giratina!");
+            break;
+        case 4:
+            console.log("Você é o Porygon-Z!");
+            break;
+        default:
+            console.log("Erro: nenhum Pokémon encontrado.");
+    }
 });
 
 
